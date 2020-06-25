@@ -1,6 +1,6 @@
-<div *ngFor="let item of users"
-[routerLink] ="['/details', item.id]">
-    <p>{{item.name}}</p>
+<div *ngFor="let item of users">
+
+    <p [routerLink] ="['/details', item.id]">{{item.name}}</p>
     <p>{{item.email}}</p>
     <button> Modificar </button>
     <button (click)="deleteUser(item.id)"> Borrar </button>

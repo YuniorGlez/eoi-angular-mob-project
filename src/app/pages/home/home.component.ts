@@ -18,10 +18,14 @@ export class HomeComponent implements OnInit {
 
   }
 
-  deleteUser(id: number){
+  deleteUser(id: number) {
     this.apiManager.deleteUser(id)
-      .then (response => {console.log("Se ha borrado")})
-      .catch(  (error) => { console.log(error) });
+      .then (response => {
+        this.users=this.users.filter(user => user.id != id)
+      })
+      .catch((error) => {
+console.log(error)
+      });
   }
 
 

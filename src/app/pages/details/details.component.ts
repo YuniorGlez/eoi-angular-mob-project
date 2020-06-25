@@ -20,7 +20,7 @@ export class DetailsComponent implements OnInit {
   getUser(id: number) {
     this.apiManager.getUser(id)
       .then( user => this.user = user )
-      .catch( err => console.log(err))
+      .catch(err => console.log(err))
   }
 
 
