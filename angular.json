@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mob-project"
+    }
+  },
+  "defaultProject": "mob-project",
+  "cli": {
+    "analytics": "2e33cd89-21b1-4447-901e-093ea70c5263"
+  }
 }
