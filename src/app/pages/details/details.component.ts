@@ -9,15 +9,9 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
-  user = {}
+  user : any = { }
   constructor(private apiManager: ApiManagerService, private route: ActivatedRoute) {
-    // getUser
-
-    // ¿Cómo cojo un param de la url angular? google
-    /*     this.route.snapshot.paramMap.get('id')
-     */
-
-
+    this.getUser(parseInt(this.route.snapshot.paramMap.get('id')));
   }
 
   ngOnInit(): void {
@@ -25,8 +19,8 @@ export class DetailsComponent implements OnInit {
 
   getUser(id: number) {
     this.apiManager.getUser(id)
-    .then( )
-
+      .then( user => this.user = user )
+      .catch( err => console.log(err))
   }
 
 
