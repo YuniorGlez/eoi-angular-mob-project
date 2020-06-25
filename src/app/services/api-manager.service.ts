@@ -14,4 +14,10 @@ export class ApiManagerService {
       .then((res) => res.data)
       .catch((err) => console.log(err))
   }
+
+  // getUser(id) {
+  //   return axios.get(this.url + "/id")
+
+  // }
+
 }

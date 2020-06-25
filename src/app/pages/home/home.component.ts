@@ -12,7 +12,10 @@ export class HomeComponent implements OnInit {
     apiManager.getAllUsers()
       .then( response => {
         this.users = response;
+        console.log(this.users)
       })
+
+      
   }
 
 
