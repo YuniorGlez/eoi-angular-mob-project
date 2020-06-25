@@ -21,4 +21,7 @@ export class ApiManagerService {
       .catch(err => console.log(err));
   }
 
+  async deleteUser(id){
+     return await axios.delete(`${this.url}/${id}`)
+  }
 }
