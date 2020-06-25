@@ -5,14 +5,13 @@ import axios from 'axios';
   providedIn: 'root'
 })
 export class ApiManagerService {
-  url = 'https://jsonplaceholder.typicode.com/users' ;
+  url = 'https://jsonplaceholder.typicode.com/users';
 
   constructor() { }
 
-  getAllUsers(){
-      axios.get(this.url){
-
-      }
-
+  getAllUsers() {
+    return axios.get(this.url)
+      .then((res) => res.data)
+      .catch((err) => console.log(err))
   }
 }
