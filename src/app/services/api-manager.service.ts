@@ -23,5 +23,14 @@ export class ApiManagerService {
 
   async deleteUser(id) {
     return await axios.delete(`${this.url}/${id}`)
+        .then(res => res.data)
   }
+
+  addUser(user) {
+    return axios.post(`${this.url}` , user)
+      .then(res => res.data)
+
+  }
+
+
 }

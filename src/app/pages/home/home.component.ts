@@ -6,6 +6,7 @@ import { ApiManagerService } from '../../services/api-manager.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  myObject = { name : "Nuevo" , email : "email" , tlf : "phone"};
 
   users = [];
   constructor( private apiManager: ApiManagerService) {
@@ -24,10 +25,24 @@ export class HomeComponent implements OnInit {
         this.users=this.users.filter(user => user.id != id)
       })
       .catch((error) => {
-console.log(error)
+        console.log(error)
       });
+
   }
 
+  addUser() {
+    const user = {
+      name : this.myObject.name,
+      phone : this.myObject.tlf,
+      email : this.myObject.email
+    }
+
+    this.apiManager.addUser(user)
+      .then(response => {
+        console.log('Lo metí en la api');
+        console.log({response});
+      })
+  }
 
   ngOnInit(): void {
 

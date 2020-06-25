@@ -1,9 +1,8 @@
-<p>form works!</p>
 <form>
     <p>Nombre: </p>
-    <input type="text" [(ngModel)]= "name" />
+    <input type="text" name="name" [(ngModel)]="newUser.name" />
     <p>Correo: </p>
-    <input type="text" [(ngModel)]= "email"/>
+    <input type="text" name="email" [(ngModel)]="newUser.email"/>
     <p>Número: </p>
-    <input type="text" [(ngModel)]= "tlf"/>
+    <input type="text" name="tlf" [(ngModel)]="newUser.tlf"/>
 </form>

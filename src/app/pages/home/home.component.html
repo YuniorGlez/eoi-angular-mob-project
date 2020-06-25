@@ -1,5 +1,8 @@
-<button> Crear Usuario Nuevo</button>
-<app-form></app-form>
+
+<button (click)="addUser()"> Crear Usuario Nuevo</button>
+
+<app-form [newUser]="myObject"  ></app-form>
+
 <div *ngFor="let item of users">
 
     <p [routerLink] ="['/details', item.id]">{{item.name}}</p>
