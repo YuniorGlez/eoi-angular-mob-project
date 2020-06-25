@@ -15,9 +15,10 @@ export class ApiManagerService {
       .catch((err) => console.log(err))
   }
 
-  // getUser(id) {
-  //   return axios.get(this.url + "/id")
-
-  // }
+  getUser(id) {
+     return axios.get(`${this.url}/${id}`)
+      .then(res => res.data)
+      .catch(err => console.log(err));
+  }
 
 }

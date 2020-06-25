@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
         this.users = response;
         console.log(this.users)
       })
-
+    apiManager.getUser(1);
       
   }
 
