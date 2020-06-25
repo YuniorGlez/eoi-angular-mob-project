@@ -38,9 +38,16 @@ export class HomeComponent implements OnInit {
     }
 
     this.apiManager.addUser(user)
-      .then(response => {
+      .then(newUser => {
         console.log('Lo metí en la api');
-        console.log({response});
+        console.log({ newUser });
+        this.users.unshift(newUser)
+        this.myObject = {
+          name: "",
+          email: "",
+          tlf : ""
+
+        }
       })
   }
 
